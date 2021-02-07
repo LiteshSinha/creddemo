@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:swagpoints="http://schemas.android.com/apk/res-auto"
+    android:background="#1A1D29"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_cancel"
+                android:layout_centerVertical="true"/>
+            <ImageView
+                android:id="@+id/iv_help"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_question"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="74dp"
+        app:cardCornerRadius="36dp"
+        app:cardUseCompatPadding="false"
+        style="@style/CustomCardViewStyle"
+        app:cardBackgroundColor="#171A23"
+        android:layout_marginBottom="-50dp">
+    <LinearLayout
+        android:padding="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ll_expanded_credit_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_credit_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:textColor="#D3D3D3"
+                android:text="Nikunj, How much do you need?"
+                android:layout_marginLeft="12dp" />
+            <TextView
+                android:id="@+id/tv_credit_sub_heading"
+                android:layout_below="@+id/tv_credit_heading"
+                android:layout_toLeftOf="@+id/iv_credit_amount_down_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp"
+                android:textColor="#656565"
+                android:text="Move the dial and set any amount you need upto Rs.487891."
+                android:layout_marginLeft="12dp" />
+
+        </LinearLayout>
+<RelativeLayout
+    android:id="@+id/rl_collapsed_view"
+    android:padding="16dp"
+    android:visibility="gone"
+    android:onClick="onCreditAmountClick"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_collapsed_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp"
+        android:textColor="#242934"
+        android:text="credit amount"
+        android:layout_marginLeft="12dp" />
+    <TextView
+        android:id="@+id/tv_collapsed_credit_amount"
+        android:layout_below="@+id/tv_collapsed_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:textSize="14sp"
+        android:textColor="#362E3A"
+        android:text="Rs.1,50,000"
+        android:layout_marginLeft="12dp" />
+
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_credit_amount_down_arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_centerVertical="true"
+        android:padding="16dp"
+        app:tint="#656565"
+        android:src="@drawable/ic_down_arrow"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp" />
+</RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_credit_limit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="#ffffff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+                <FrameLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textSize="10sp"
+                            android:textColor="#D3D3D3"
+                            android:text="credit amount"
+                           />
+                        <TextView
+                            android:id="@+id/tv_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textSize="16sp"
+                            android:textColor="#000"
+                            android:layout_gravity="center"
+                            android:text="Rs.100000"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textSize="10sp"
+                            android:textColor="#4cbb17"
+                            android:text="/@1.04% monthly"
+                           />
+                    </LinearLayout>
+                    <com.dualcores.swagpoints.SwagPoints
+                        android:id="@+id/seekbar_credit"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_gravity="center"
+                        android:padding="64dp"
+                        android:layout_marginTop="8dp"
+                        swagpoints:min="100000"
+                        swagpoints:max="487891"
+                        swagpoints:step="100"
+                        swagpoints:progressColor="#CE8C72"
+                        swagpoints:progressWidth="12dp"
+                        swagpoints:arcColor="#FBE8DB"
+                        swagpoints:arcWidth="14dp"
+                        swagpoints:textSize="64sp"
+                        swagpoints:textColor="#00000000"
+                        swagpoints:indicatorIcon="@drawable/remove"
+                        />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="10sp"
+                    android:textColor="#D3D3D3"
+                    android:text="stash is instant. Money will be credited within seconds."
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <include
+        layout="@layout/bottomsheet_emi_selection"
+        android:visibility="visible" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
