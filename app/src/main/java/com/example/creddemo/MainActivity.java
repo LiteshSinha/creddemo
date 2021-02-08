@@ -139,7 +139,6 @@ public class MainActivity extends AppCompatActivity implements MainActivityViewI
             @Override
             public void onStateChanged(@NonNull View bottomSheet, int newState) {
                 if (newState == BottomSheetBehavior.STATE_EXPANDED) {
-//                    view.findViewById(R.id.overlay).setVisibility(View.GONE);
                     emiLayoutBottomSheet.setHideable(false);
                     setUpBankAccountBottomSheet();
                 }
